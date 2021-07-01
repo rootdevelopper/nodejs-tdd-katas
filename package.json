@@ -1,0 +1,26 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "description": "Katas in pure node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [
+    "nodejs",
+    "katas",
+    "tdd"
+  ],
+  "author": "rootdevelopper",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.7",
+    "@types/node": "^15.12.5"
+  },
+  "dependencies": {
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3"
+  }
+}
