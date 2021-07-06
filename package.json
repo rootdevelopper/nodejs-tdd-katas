@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "game:tic-tac-toe": "node tic-tac/tic-tac-toa-brain.js",
+    "game:tic-tac-toe": "node tic-tac/tic-tac-toe-brain.js",
     "test": "jest --config ./jest.config.json",
     "test:watch": "npm run test -- --watch"
   },
