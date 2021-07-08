@@ -6,8 +6,6 @@ module.exports = class TicTacToeMain {
   board = [this.firstRow, this.secondRow, this.thirdRow];
   enteredvalues = [];
 
-  constructor() {}
-
   newPosition(position, userSymbol) {
 
     if(this.enteredvalues.includes(position)){
@@ -34,17 +32,15 @@ module.exports = class TicTacToeMain {
 
    didUserWins(userBoard, userSymbol) {
     for (let i = 0; i < userBoard.length; i++) {
-      if (this.isRowomplete(userBoard, i, userSymbol)) {
+      if (
+        this.isRowomplete(userBoard, i, userSymbol) ||
+        this.isColumnComplete(userBoard, i, userSymbol) ||
+        this.isDiagonalLeftComplete(userBoard, i, userSymbol) ||
+        this.isDiagonalRightComplete(userBoard, i, userSymbol)
+      ) {
         return true;
-      } else if (this.isColumnComplete(userBoard, i, userSymbol)) {
-        return true;
-      } else if (this.isDiagonalLeftComplete(userBoard, i, userSymbol)) {
-        return true;
-      } else if (this.isDiagonalRightComplete(userBoard, i, userSymbol)) {
-        return true;
-      }
+      } 
     }
-  
     return false;
   }
   
